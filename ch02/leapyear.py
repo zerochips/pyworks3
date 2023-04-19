@@ -7,7 +7,7 @@
 # 예외(오류) 처리 - try ~ except 구문
 
 try:
-    year = int(input("연도를 입력하세요"))
+    year = int(input("연도를 입력하세요 "))
 
     if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
     # print(str(year) + "년은 윤년입니다.")
