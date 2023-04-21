@@ -23,13 +23,14 @@ def fire():
         t.right(5)
 
     d = t.distance(target, 0)           # 거북이와 목표 지점과의 거리
+    t.write(d)
     t.sety(random.randint(10, 100))     # 성공 또는 실패를 표시할 위치
     if d < 25:                          # 명중 - 목표지점에 닿음
         t.color('blue')
-        t.write("Good!", False, "center", ("", 15))
+        t.write("뽕바스틱!!", False, "center", ("", 15))
     else:   # 목표 지점에 닿지 않았을 때
         t.color('red')
-        t.write("Bad!", False, "center", ("", 15))
+        t.write("앗!", False, "center", ("", 15))
         t.color('black')
         t.goto(-200, 10)
         t.setheading(ang)   # 기억된 머리 각도 설정
