@@ -16,15 +16,16 @@ def add(x, y):      # 두 수를 더하는 함수
     val = x + y
     return val
 
-# 함수를 만들었고 호출하고 싶어요
-# print로 바로 출력하는 방법이 있고
-# print(one_up())   # 1
-# print(one_up())   # 1
-print(square(2))
+if __name__=="__main__":
+    # 함수를 만들었고 호출하고 싶어요
+    # print로 바로 출력하는 방법이 있고
+    # print(one_up())   # 1
+    # print(one_up())   # 1
+    print(square(2))
 
-# 변수를 담아서 호출
-result = square(3)
-print(result)
+    # 변수를 담아서 호출
+    result = square(3)
+    print(result)
 
-# add() 함수 호
-print(add(3,4))
+    # add() 함수 호
+    print(add(3,4))
