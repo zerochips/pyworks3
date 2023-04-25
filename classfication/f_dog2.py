@@ -19,3 +19,5 @@ print(dog1.tricks)
 
 dog2.add_trick('죽은척 하기')
 print(dog2.tricks)
+
+# 트릭을 쓰는거는 공유하면 안되죠

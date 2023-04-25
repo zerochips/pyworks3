@@ -1,6 +1,6 @@
 # Dog 클래스
 class Dog:
-    kind = "진돗개"              # 클래스 변수
+    kind = "진돗개"              # 클래스 변수 - 공유하는 변수는 위로 빼주면 됨
 
     def __init__(self, name):
         self.name = name        # 인스턴스 변수 - 필요할 때 그때 그때
