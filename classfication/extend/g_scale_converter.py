@@ -9,6 +9,7 @@ class ScaleConverter:
     def convert(self, value):
         return value * self.factor          # 숫자
 
+
 con = ScaleConverter("inches", "mm", 25)
 print("Converting 2 inches")   # 2인치 변환기
 print(str(con.convert(2)) + con.units_to)        #str 문자로 변환  # 50mm

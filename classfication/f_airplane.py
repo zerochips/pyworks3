@@ -5,22 +5,21 @@ class Airplane:
     # 기본 생성자 - 인터프리터가 생성해 줌
     """
     def __init__(self):
-    pass
+        pass
     """
 
     def take_off(self):
         print("비행기가 이륙합니다.")
 
     def fly(self):
-        print("비행기가 비행합니다.")
+        print("비행기가 일반 비행합니다.")
 
     def land(self):
         print("비행기가 착륙합니다.")
 
-
-
 # 객체 생성 방법
-air = Airplane()
-air.take_off()      # 메서드(함수) 호출
-air.fly()
-air.land()
+if __name__=="__main__":
+    air = Airplane()
+    air.take_off()      # 메서드(함수) 호출
+    air.fly()
+    air.land()
