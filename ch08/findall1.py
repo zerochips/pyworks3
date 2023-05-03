@@ -1,5 +1,8 @@
 import re
 str = "123?45yy7890 hi 999 hello"
+# \d [0-9]
+# \w [a-zA-Z]
+# \s []
 """
 # compile() - byte 코드로 바꿈
 # compile()후 findall() 하면 검색할 내용이 많은 겨우 속도가 빠름

@@ -25,13 +25,20 @@ html_str = """
 </html>
 """
 
-soup = BeautifulSoup(html_str, 'html.parser')
+soup = BeautifulSoup(html_str, 'html.parser')       # html.parser 파씽
 first_ul = soup.find('ul', attrs={'class': 'item'})
 # print(ul)             # 전체 태그 중 ul 태그만 가져옴
 # print(first_ul)
-# print(first_ul.text)  # 태그없이 텍스트 출력
+# print(first_ul.text)        # 태그없이 텍스트 출력
+first_li = soup.find('li')  # 첫번째 li만 찾음
+# print(first_li.text)
 
-all_li = first_ul.findAll('li', )
+all_li = first_ul.findAll('li')
 print(all_li)           # 출력값 - [<li>인공지능</li>, <li>빅데이터</li>, <li>로봇</li>]
 print(all_li[1])        # 출력값 - <li>빅데이터</li>
 print(all_li[1].text)   # 출력값 - 빅데이터
+
+for li in all_li:
+    # print(li)
+    print(li.text)      # 출력값 - 로봇
+

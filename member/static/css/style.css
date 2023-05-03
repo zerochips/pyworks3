@@ -10,6 +10,7 @@ header{width: 100%; height: 100px; background: #0077cc;}
 #logo{float: left; width: 30%; line-height: 100px;}
 #logo h1{color: #fff; padding-left: 30px}
 nav{float: right; width: 70%; padding-top: 40px;}
+
 /* 주메뉴 */
 #topMenu{height: 60px;}
 #topMenu > li{float: left; position: relative;}
@@ -31,6 +32,8 @@ nav{float: right; width: 70%; padding-top: 40px;}
 #main{clear: both; margin: 80px auto;}
 #main .img1{margin: 20px auto; text-align: center;}
 #main .img1 img{border-radius: 5px;}
+/* main 시간 정리*/
+#main #demo{text-align: center;}
 
 /* footer 스타일 */
 footer{height: 80px; border-top: 2px solid #222;}

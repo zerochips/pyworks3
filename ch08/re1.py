@@ -7,8 +7,8 @@ import re
 p = re.compile("[a-z]+")
 
 m1 = p.match('afternoon')       # 처음 부터 일치해야 찾음
-print(m1)           # m1 객체
-print(m1.group())   # 문자열 출력
+print(m1)                       # m1 객체
+print(m1.group())               # 문자열 출력
 
 m2 = p.match('2023 good luck')  # 숫자가 있어서 현 정규표현식 조건으론 못 찾음
 print(m2)
