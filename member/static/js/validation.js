@@ -4,6 +4,7 @@ function checkMember(){
     let id = form.memberid;
     let pw1 = form.passwd1;
     let pw2 = form.passwd2;
+    let name = form.name;
 
 
     if(id.value.length < 4 || id.value.length > 15){
@@ -12,8 +13,18 @@ function checkMember(){
         return false;
     }else if(pw1.value.length < 8){
         alert("비밀번호는 영문자/숫자/특수문자 포함 8자 이상 입력해주세요.");
-        id.select();
+        pw1.select();
         return false;
+    }else if(pw1.value != pw2.value){
+        alert("비밀번호가 일치하지 않습니다.");
+        pw2.select();
+        return false;
+    }else if(name.value == ""){
+        alert("이름은 필수 입력항목 입니다.");
+        name.focus();
+        return false;
+    }else{
+        form.submit();  // 폼 전송 - db에 저장
     }
 
 
