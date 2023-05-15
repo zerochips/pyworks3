@@ -7,20 +7,19 @@ def getconn():
 print(getconn(), "연결 객체 생성됨")
 # board 테이블 연동
 # board 테이블 생성
-
 def create_board():
     conn = getconn()
     cursor = conn.cursor()
     sql = """
-    CREATE TABLE board(
-        bno         INTEGER PRIMARY KEY AUTOINCREMENT,
-        title       TEXT NOT NULL,
-        content     TEXT NOT NULL,
-        createdate  DATETIME DEFAULT(datetime('now', 'localtime')),
-        hit         INTEGER DEFAULT 0, 
-        memberid    TEXT NOT NULL,
+      CREATE TABLE board(
+        bno INTEGER PRIMARY KEY AUTOINCREMENT,
+        title TEXT NOT NULL,
+        content TEXT NOT NULL,
+        createdate DATETIME DEFAULT (datetime('now', 'localtime')),
+        hit INTEGER DEFAULT 0,
+        memberid TEXT NOT NULL,
         FOREIGN KEY(memberid) REFERENCES member(memberid) ON DELETE CASCADE
-    )   
+      )
     """
     cursor.execute(sql)
     conn.commit()
@@ -35,28 +34,11 @@ def drop_board():
     conn.commit()
     conn.close()
 
-
 def insert_board():
     conn = getconn()
     cursor = conn.cursor()
     sql = "INSERT INTO board(title, content, memberid) VALUES (?, ?, ?)"
-    cursor.execute(sql, ('가입인사', '안녕하세요! 김민정입니다.', 'today123'))
-    conn.commit()
-    conn.close()
-
-def delete_board():
-    conn = getconn()
-    cursor = conn.cursor()
-    sql = "DELETE FROM board WHERE title = '가입입사'"
-    cursor.execute(sql)
-    conn.commit()
-    conn.close()
-
-def update_board():
-    conn = getconn()
-    cursor = conn.cursor()
-    sql = ""
-    cursor.execute(sql)
+    cursor.execute(sql, ('가입인사', '안녕하세요! 김기용입니다', 'today123'))
     conn.commit()
     conn.close()
 
@@ -66,9 +48,7 @@ def select_board():
     sql = "SELECT * FROM board"
     cursor.execute(sql)
     boardlist = cursor.fetchall()
-    # 요소로 출력 [(1, '가입인사', '안녕하세요! 김민정입니다.', '2023-05-10 12:07:05', 0, 'today123')]
     print(boardlist)
-    # 튜플로 출력 (1, '가입인사', '안녕하세요! 김민정입니다.', '2023-05-10 12:07:05', 0, 'today123')
     for board in boardlist:
         print(board)
     conn.close()
@@ -76,14 +56,15 @@ def select_board():
 # 함수 호출
 # create_board()
 # insert_board()
-# select_board()
-# delete_board()
-update_board()
+select_board()
 # drop_board()
 
-##############################################################################
-# member 테이블과 연동
 
+
+
+
+
+# meber 테이블과 연동
 """
 def select():
     conn = getconn()
@@ -116,7 +97,3 @@ def select_one():
     print(rs)
     conn.close()
 """
-
-# insert()
-# select()
-# select_one()
