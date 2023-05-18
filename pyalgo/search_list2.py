@@ -7,6 +7,7 @@ def search_list(a, x):
     for i in range(0, n):
         if a[i] == x:
             return name[i]      # i -> name[i]
+            # return i
     return '?'
 
 v = [60, 5, 33, 12, 97]

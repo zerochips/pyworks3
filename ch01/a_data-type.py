@@ -31,12 +31,6 @@ print(10 > 11) #False
 print(10 < 11) #True
 
 
-
-
-
-
-
-
 '''
 DB 모델링 툴
 - Lucid Chart

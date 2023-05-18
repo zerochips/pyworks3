@@ -16,3 +16,6 @@ else:
     #row = customer // col + 1
     row = int(customer / col) + 1
 print("줄수", row)
+
+if row > customer:
+    print(customer)

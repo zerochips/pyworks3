@@ -14,7 +14,7 @@ result = ""
 
 for i in range(1, 10):
     current_val = f'{dan} x {i} = {dan*i}\n'
-    result = result + current_val;
+    result = result + current_val
 print(result)
 
 '''

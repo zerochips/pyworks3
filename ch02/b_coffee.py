@@ -16,10 +16,11 @@ coffee = 5
 while True:
     try:
         coin = int(input("돈을 넣어주세요: "))
-        
+        coffee -= 1
+
         if coin == 400:
             print("커피가 나옵니다")
-            coffee -= 1
+            # coffee -= 1
         elif coin > 400:
             print(f"커피가 나오고, 거스름돈{coin-400}원을 돌려 받습니다.")
         else:
@@ -30,5 +31,6 @@ while True:
             print("커피가 모두 소진되었습니다. 판매를 중지합니다.")
             break
     except:
-        # print("돈을 넣어 주세요") 반복됨
-        pass
+        #print("돈을 넣어 주세요") # 반복됨
+        print("다시 결제해주세요.")
+        # pass

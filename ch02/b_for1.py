@@ -47,16 +47,18 @@ for i in range(1, 10, 1):
     print(i)'''
 
 # 50보다 큰 수 출력
+"""
 num = [10, 50, 30, 70]
 for i in num:
     if i > 50:
         print(i)
-
+"""
 city = ['Seoul', 'Incheon', 'Gwangju']
 for i in city:
     print(i[0])
+    # print(i)
 
-    city = ['Seoul', 'Incheon', 'Gwangju']
+city = ['Seoul', 'Incheon', 'Gwangju']
 for i in city:
     print(i[0], end=' ')
 '''
