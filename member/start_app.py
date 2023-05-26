@@ -135,8 +135,8 @@ def detail(bno):  #매개변수로 bno 설정
     cursor.execute(sql)
     board = cursor.fetchone()  # 게시글 1개 가져옴
 
-    # 조회수 증가
-    hit = board[4]
+    # 조회수 증가 **** 5월 26일 오류로 board[4] -> [5]로 변경하여 오류 수정함.
+    hit = board[5]
     sql = f"UPDATE board SET hit = {hit + 1} WHERE bno = {bno}"
     cursor.execute(sql)
     conn.commit()

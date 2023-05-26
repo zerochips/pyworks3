@@ -40,7 +40,7 @@
                             </a>
                             <!-- 로그인한 사람과 글쓴이가 같으면 삭제, 수정 버튼이 보이고,
                                  아니면 보이지 않음-->
-                            {% if session['userid'] == board[5] %}
+                            {% if session['userid'] == board[6] %}  <!--board[6] 수정, 삭제 버튼이 보이지 않으면 확인 후 수정이 필요한 구간-->
                             <a href="{{ url_for('update', bno=board[0]) }}">
                                 <button type="button">수정</button>
                             </a>
