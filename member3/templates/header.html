@@ -4,7 +4,7 @@
     </div>
     <nav>
         <ul id="topMenu">
-            {% if session['userid'] %}
+            {% if session['userid'] %} <!-- 80번째 줄 session 설정을 해줬음-->
             <li><a href="">회원</a>
                 <ul>
                     <li><a href="{{ url_for('register') }}">회원 가입</a></li>
@@ -38,3 +38,4 @@
         </ul>
     </nav>
 </header>
+<!---->

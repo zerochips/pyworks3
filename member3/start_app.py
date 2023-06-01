@@ -77,7 +77,7 @@ def login():
         print(rs)
         conn.close()
 
-        if rs: # rs = True
+        if rs: # rs = True - templates 의 header.html 7번째 줄 확인 - 서로 설정(연결)
             session['userid'] = rs[0]  #memberid를 세션에 저장(세션 발급)
             return redirect(url_for('index'))
         else:
@@ -92,7 +92,7 @@ def logout():
     session.clear()  #모든 세션 삭제
     return redirect(url_for('index'))
 
-# 게시판 목록
+# 게시판 목록 - boardlist 자바에서는 서블릿에서 만들죠
 @app.route('/boardlist', methods = ['GET'])
 def boardlist():
     conn = getconn()
